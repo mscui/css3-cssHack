@@ -1,0 +1,41 @@
+/**
+ * @file css3 一些技巧
+ */
+
+/* 1. 表单checkbox样式更改[支持IE9及以上，Chrome，firefox]
+ <input type="checkbox" class="checkbox" name="createItem" id="i"/>
+ <label for="i"></label>
+*/
+
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"] + label {
+    background: #fff;
+    height: 14px;
+    width: 14px;
+    display: inline-block;
+    padding: 0;
+    border: 1px solid #adc2db;
+    vertical-align: text-top;
+}
+
+input[type="checkbox"]:checked + label {
+    background: url(/static/img/clicked_btn.png) no-repeat center center;
+    height: 14px;
+    width: 14px;
+    display: inline-block;
+    padding: 0;
+    border: 1px solid #39f;
+    vertical-align: text-top;
+}
+
+/* 2. text-overflow -- table 在width不固定的时候的解决方案
+ [支持IE9及以上，Chrome，firefox]
+*/
+table tbody td {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
